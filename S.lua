@@ -4,12 +4,11 @@ scriptDetailsUrl = ""
 
 function onPoseEdge(pose, edge)	
     if (pose ~= "rest" and pose ~= "unknown") then
-        -- hold if edge is on, timed if edge is off
         myo.unlock(edge == "off" and "timed" or "hold")
-    end    
+    end
 end
  
 function onFist(keyEdge)
-    myo.debug("S")    
+    myo.debug("S")
     myo.keyboard("s",keyEdge)
 end
